@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema con Código de Barras</title>
+
+  <!-- Librerías -->
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode/dist/JsBarcode.all.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+    }
+
+    #reader {
+      width: 300px;
+      margin: 20px auto;
+    }
+
+    .producto {
+      border: 1px solid #ccc;
+      margin: 10px;
+      padding: 10px;
+    }
+
+    svg {
+      margin-top: 10px;
+    }
+
+    #info {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    button {
+      padding: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Sistema de Productos</h1>
+
+<button onclick="iniciarScanner()">📱 Escanear</button>
+<button onclick="window.print()">🖨️ Imprimir etiquetas</button>
+
+<div id="reader"></div>
+
+<h2>Producto escaneado</h2>
+<div id="info"></div>
+
+<h2>Lista de productos</h2>
+<div id="lista"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
